@@ -4,9 +4,21 @@ Drafted 2026-08-14 after Vercel went live. Send these in order, one per day. Dis
 
 ## 1. r/indianstartups — send today
 
-Title:
+Submit settings (the form will not post without these):
 
-I scored 5 Indian help centres on whether the refund clock and the phone number agree
+- Community: r/indianstartups
+- Type: Text
+- Flair: **Business Ride Along**
+  - That is the flair live “I built / we built” posts use today.
+  - If the list does not show it, use **Startup help**.
+  - Do not use Co-founder search, News, How do I?, or How to Grow?
+- Tags: **Feedback**
+  - If the form lets you add more than one: Feedback, SaaS
+  - If it is a free-text tag box: `Feedback`
+- NSFW: off
+- Disclose you built it (already in the body). Rule 2 bans ads unless the right flair is on.
+
+Title:
 
 Body:
 
