@@ -5,7 +5,7 @@ Update this file at the end of every working session. A new Claude with no chat 
 ## Status
 
 - Product: BotLitmus (option A from the Grok session: public Bot Honesty Score)
-- Repo: https://github.com/ARPRK1/botlitmus
+- Repo: https://github.com/ARPRK1/botlitmus (public, main @ bd46be7+)
 - Live URL: not deployed yet. Intended: Vercel, project `botlitmus`.
 - First rupee: not received.
 - Published reports: 5 (zerodha 89 B, razorpay 68 D, groww 68 D, nykaa 66 D, boat 48 F)

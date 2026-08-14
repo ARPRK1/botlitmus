@@ -31,6 +31,7 @@ v1 measures **public pages**. It does not log into Intercom. Do not claim “we 
 - Reports are JSON in `data/reports/`. Import them in `lib/reports.ts`. No database.
 - Scanner: `lib/scanner.ts`. Live: `POST /api/scan`. CLI: `npm run scan -- URL`
 - Hosting: Vercel (not deployed on first commit)
+- GitHub Actions was omitted. The token that created the repo lacks `workflow` scope. Add `.github/workflows/ci.yml` later (`npm ci`, `npm run lint`, `npm run build`) if Rana upgrades the token.
 
 ```
 npm install
