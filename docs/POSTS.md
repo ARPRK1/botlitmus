@@ -1,65 +1,71 @@
 # Posts Rana sends (do not auto-post)
 
-Drafted 2026-08-14 after Vercel went live. Send these in order, one per day. Disclose you built it. Do not paste the same text on every site the same day.
+## 1. r/indianstartups — REMOVED 2026-08-14
 
-## 1. r/indianstartups — send today
+Do not repost the same text there. Rule 2 bans promo. Mods have said they pull AI-looking launch posts by hand. Four product links was enough.
 
-Submit settings (the form will not post without these):
+Optional modmail, once:
 
-- Community: r/indianstartups
-- Type: Text
-- Flair: **Business Ride Along**
-  - That is the flair live “I built / we built” posts use today.
-  - If the list does not show it, use **Startup help**.
-  - Do not use Co-founder search, News, How do I?, or How to Grow?
-- Tags: **Feedback**
-  - If the form lets you add more than one: Feedback, SaaS
-  - If it is a free-text tag box: `Feedback`
-- NSFW: off
-- Disclose you built it (already in the body). Rule 2 bans ads unless the right flair is on.
+To: r/indianstartups
+Subject: Removal of help-centre scoring post
+
+Hi. My post on scoring five Indian help centres was removed. I built the site, so I get that it can read as promo. Happy to post a version with no links if that is allowed. If the issue was account age or automod, tell me and I will wait. Thanks.
+
+## 1b. r/SideProject — send today
+
+This sub exists to share what you built. One link, at the end. Do not paste the indianstartups draft.
+
+Community: r/SideProject
+Type: Text
+Flair: Show / Feedback (pick what the form offers for a finished project)
+Tags: Feedback
+NSFW: off
 
 Title:
 
+I scored 5 Indian help centres on whether the refund clock and the phone number agree
+
 Body:
 
-I work in support operations. I kept seeing the same failure: the homepage says one thing, the policy says another, and the chatbot or the help page cannot tell which is true.
+I work in support ops in India. Refund tickets often start the same way: the homepage promised one thing, the policy said another.
 
-So I built a public score for that. Not CSAT. Not "is the brand nice". Just: can a customer read the public pages and know what will actually happen when something goes wrong.
+I started reading the public pages. Then I put the notes on a small public site so the quotes stay attached to the score.
 
-First five, fetched 14 Aug 2026. Partial crawls are labelled.
+First five, fetched 14 Aug 2026. Crawls were partial and labelled.
 
-- Zerodha 89 B. Support home is a map. August 2026 bulletins sit on the same page.
-- Razorpay 68 D. The grievance URL is a product catalogue.
-- Groww 68 D. The page says 24x7. Named CX leadership is Mon-Fri 9-5.
-- Nykaa 66 D. Same policy uses "15 days" and "15 business days". Two official toll-free numbers.
-- boAt 48 F. Same policy says "liberal cancellation" and "no return or refund shall be provided."
+Zerodha 89 B. Support home is a map. Current-month bulletins sit on it.
 
-Every finding has a quote and a URL. Method is public.
+Razorpay 68 D. The grievance URL is a product catalogue.
 
-League: https://botlitmus.vercel.app
-Nykaa (the two clocks): https://botlitmus.vercel.app/report/nykaa
-boAt (liberal vs none): https://botlitmus.vercel.app/report/boat
-Method: https://botlitmus.vercel.app/method
+Groww 68 D. Page says 24x7. Named CX leadership is Mon-Fri 9-5.
 
-I built this. If a quote is wrong, email me the corrected page and I will re-fetch. I am not asking for upvotes. I want to know which brand I should score next, and whether the rubric feels fair.
+Nykaa 66 D. Same policy uses 15 days and 15 business days. Two official toll-free numbers.
 
-## 2. LinkedIn — tomorrow, not today
+boAt 48 F. Same policy says liberal cancellation, then no return or refund shall be provided.
+
+I built it. Method is on the site. If a quote is wrong I will re-fetch.
+
+https://botlitmus.vercel.app
+
+Which brand should I read next?
+
+## 2. LinkedIn — can go today if Reddit is blocked
 
 I read five Indian help centres and scored whether they tell the same story as the rest of the site.
 
-Nykaa's cancellation policy uses "15 days" and "15 business days" on the same page. It also lists two different toll-free numbers on two official pages.
+Nykaa's cancellation policy uses 15 days and 15 business days on the same page. It also lists two different toll-free numbers on two official pages.
 
 boAt's policy calls itself liberal, then says no return or refund shall be provided.
 
 Zerodha is the high-water mark in this first set. The support home is a map. It does not sell.
 
-The public league is here: https://botlitmus.vercel.app
+https://botlitmus.vercel.app
 
 I built BotLitmus. If this is your brand and a quote is stale, send me the new URL.
 
-## 3. X — day 3
+## 3. X — not the same day as LinkedIn
 
-Nykaa's return policy uses "15 days" and "15 business days" on the same page.
+Nykaa's return policy uses 15 days and 15 business days on the same page.
 
 Two official phone numbers on two official pages.
 
