@@ -1,45 +1,40 @@
-# STATE — 2026-08-14
+# STATE — 2026-08-14 (evening)
 
 Update this file at the end of every working session. A new Claude with no chat history should be able to start from here.
 
 ## Status
 
 - Product: BotLitmus (option A from the Grok session: public Bot Honesty Score)
-- Repo: https://github.com/ARPRK1/botlitmus (public, main @ bd46be7+)
-- Live URL: not deployed yet. Intended: Vercel, project `botlitmus`.
+- Repo: https://github.com/ARPRK1/botlitmus
+- Live URL: https://botlitmus.vercel.app
+- GitHub homepage field: set to that URL
 - First rupee: not received.
+- Public post: not sent yet. Draft is in `docs/POSTS.md`.
 - Published reports: 5 (zerodha 89 B, razorpay 68 D, groww 68 D, nykaa 66 D, boat 48 F)
 
-## What shipped this session
+## What shipped
 
-- Next.js 15.5.21 app: league, report pages, scan, method, pricing, about
-- `npm run build` green on 2026-08-14 (17 static routes, 5 report pages)
-- Heuristic scanner (`lib/scanner.ts`) + `POST /api/scan`
-- Five editor-scored reports from fetched public pages, quotes on file
-- Handoff: CLAUDE.md, docs/*
+- Next.js 15.5.21 app on Vercel
+- Five editor-scored reports, quotes on file
+- Heuristic scanner + `/scan`
+- Owner confirmed reports look good on the live site
 
 ## What is not done
 
-- Vercel deploy
+- First public post (this is the blocker)
+- 5 more reports
 - Razorpay
 - PDF generation
-- 20 more reports
 - Live chatbot transcripts
 - Custom domain
 
 ## Next work, in order
 
-1. `npm run build` must stay green.
-2. Deploy to Vercel (owner: Rana, GitHub ARPRK1). Put the URL in this file.
-3. Add 5 more reports. Suggested, only if fetchable:
-   - Freshworks support
-   - Chargebee docs/support
-   - Mamaearth policy
-   - PhonePe help
-   - Policybazaar help
-   Skip anything Cloudflare-blocked (Wakefit homepage was).
-4. One public post (LAUNCH.md item 1). Rana sends it. Claude drafts.
-5. Razorpay only after a human asks to pay.
+1. Rana posts `docs/POSTS.md` item 1 to r/indianstartups today. Claude does not post.
+2. Tomorrow: LinkedIn (item 2). Day 3: X (item 3).
+3. Then add 5 more reports if fetchable: Freshworks, Chargebee, Mamaearth, PhonePe, Policybazaar. Skip Cloudflare-blocked brands.
+4. If a founder emails, send a fix-order PDF by hand. Take ₹999. Do not wait for Razorpay.
+5. Razorpay only after a human has asked to pay.
 
 ## Parked forever (for this repo)
 

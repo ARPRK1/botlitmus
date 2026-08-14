@@ -30,7 +30,7 @@ v1 measures **public pages**. It does not log into Intercom. Do not claim “we 
 - Next.js 15 App Router, React 19, TypeScript, Tailwind 3
 - Reports are JSON in `data/reports/`. Import them in `lib/reports.ts`. No database.
 - Scanner: `lib/scanner.ts`. Live: `POST /api/scan`. CLI: `npm run scan -- URL`
-- Hosting: Vercel (not deployed on first commit)
+- Hosting: live at https://botlitmus.vercel.app
 - GitHub Actions was omitted. The token that created the repo lacks `workflow` scope. Add `.github/workflows/ci.yml` later (`npm ci`, `npm run lint`, `npm run build`) if Rana upgrades the token.
 
 ```

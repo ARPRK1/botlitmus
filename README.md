@@ -8,7 +8,7 @@ This is not a chatbot builder. It is a public record of whether the refund clock
 
 ## Live
 
-Not deployed on first commit. After Vercel: update `docs/STATE.md`.
+https://botlitmus.vercel.app
 
 ## Run locally
 
