@@ -1,0 +1,83 @@
+{
+  "slug": "zerodha",
+  "brand": "Zerodha",
+  "sector": "Consumer broking",
+  "country": "IN",
+  "homepage": "https://zerodha.com",
+  "helpUrls": [
+    "https://support.zerodha.com/"
+  ],
+  "scannedAt": "2026-08-14",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Support portal homepage fetched. Individual articles not line-scored. This is the high-water mark in the first five, not a claim of perfection.",
+  "summary": "Zerodha’s support home is a map, not a slogan. Categories match the jobs a customer actually has. August 2026 bulletins sit on the same page. Ticket creation is documented, not hidden behind “chat with us”.",
+  "score": 89,
+  "grade": "B",
+  "editor": "Rana / BotLitmus v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 24,
+      "note": "No colliding numbers on the homepage. Information architecture is consistent with the products they sell."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 18,
+      "note": "Support portal does not sell. Marketing stays on zerodha.com."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 14,
+      "note": "Surveillance and buyback bulletins dated August 2026 on the support home."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 19,
+      "note": "Account opening, funds in/out, margins, reports, tickets. Everyday tasks are first-class."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 8,
+      "note": "Ticket creation is a documented article. Phone-first is not the design. That is a choice, and it is stated."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 6,
+      "note": "No pretend-human widget on the homepage. Ticket is the path."
+    }
+  ],
+  "findings": [
+    {
+      "id": "zerodha-ticket-not-phone",
+      "severity": "low",
+      "type": "buried",
+      "title": "Human help is a ticket, not a phone number on the home",
+      "whyItHurts": "Some customers will bounce looking for a number. Zerodha has chosen tickets on purpose. Say that in one line on the home: “We answer tickets, not phone queues.”",
+      "fix": "A single sentence under the search box. Keep the ticket article as the next click.",
+      "evidence": [
+        {
+          "url": "https://support.zerodha.com/",
+          "quote": "Learn how to create a ticket",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "widgets": [],
+  "pagesFetched": [
+    { "url": "https://support.zerodha.com/", "ok": true, "title": "Zerodha Support Portal" }
+  ]
+}

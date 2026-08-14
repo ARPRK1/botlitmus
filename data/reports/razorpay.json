@@ -1,0 +1,107 @@
+{
+  "slug": "razorpay",
+  "brand": "Razorpay",
+  "sector": "Fintech / payments",
+  "country": "IN",
+  "homepage": "https://razorpay.com",
+  "helpUrls": [
+    "https://razorpay.com/support/",
+    "https://razorpay.com/grievance-redressal/",
+    "https://razorpay.com/docs/"
+  ],
+  "scannedAt": "2026-08-14",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Support hub and grievance landing fetched. Individual product grievance pages and the docs home were not scored line by line.",
+  "summary": "Razorpay splits customers, merchants, and partners on the support hub. That is the right first question. The grievance URL then sells products instead of stating a grievance process.",
+  "score": 68,
+  "grade": "D",
+  "editor": "Rana / BotLitmus v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 16,
+      "note": "Support hub is internally coherent. Grievance landing repeats the Digital Lending card and uses marketing sentences in a legal slot."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 11,
+      "note": "A page titled grievance redressal is a product picker with “Supercharge your business” copy."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 12,
+      "note": "No obvious stale year. No last-updated stamp on the two public pages we fetched."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 16,
+      "note": "Ticket by product, docs, chargeback and settlement guides, end-customer path. Missing a plain “I was charged twice” article on the hub."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 8,
+      "note": "Ticket forms exist per product. Grievance is linked. Named officer not on the two pages fetched."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 5,
+      "note": "No public chat widget on the support hub. Neutral."
+    }
+  ],
+  "findings": [
+    {
+      "id": "rzp-grievance-is-marketing",
+      "severity": "high",
+      "type": "overclaim",
+      "title": "Grievance page is a product catalogue",
+      "whyItHurts": "A customer who was sent “see our grievance policy” lands on Payments / Banking+ / Payroll cards. That is how a RBI or NPCI complaint gets written.",
+      "fix": "One page per entity: how to raise, SLA, officer name, regulator link. Link products after that.",
+      "evidence": [
+        {
+          "url": "https://razorpay.com/grievance-redressal/",
+          "quote": "Select a Grievance Redressal to know more",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://razorpay.com/grievance-redressal/",
+          "quote": "Supercharge your business with our complete suite of payment solutions.",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "rzp-end-customer-ok",
+      "severity": "low",
+      "type": "missing",
+      "title": "End-customer path exists on the hub, then disappears",
+      "whyItHurts": "“I recently paid online via Razorpay” is the right first tile. The next click should be a 4-step charge investigation, not another product fork.",
+      "fix": "Give payers a single ticket type: duplicate charge, failed-but-debited, unknown merchant.",
+      "evidence": [
+        {
+          "url": "https://razorpay.com/support/",
+          "quote": "Customer — I recently paid online via Razorpay",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "widgets": [],
+  "pagesFetched": [
+    { "url": "https://razorpay.com/support/", "ok": true, "title": "Razorpay Support" },
+    { "url": "https://razorpay.com/grievance-redressal/", "ok": true, "title": "Grievance Redressal" },
+    { "url": "https://razorpay.com/docs/", "ok": true, "title": "Developer Docs (linked)" }
+  ]
+}

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-serif antialiased;
+}
+
+::selection {
+  background: #14120e;
+  color: #f3efe4;
+}
+
+a {
+  text-underline-offset: 3px;
+}

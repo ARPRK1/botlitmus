@@ -1,0 +1,152 @@
+{
+  "slug": "nykaa",
+  "brand": "Nykaa",
+  "sector": "D2C beauty / marketplace",
+  "country": "IN",
+  "homepage": "https://www.nykaa.com",
+  "helpUrls": [
+    "https://www.nykaa.com/cancellation-policy",
+    "https://www.nykaa.com/policy",
+    "https://support.nykaa.com/"
+  ],
+  "scannedAt": "2026-08-14",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Fetched cancellation policy and privacy/grievance pages. support.nykaa.com was not fully extracted. Nykaa Fashion and Nykaa Man policies were read as sister properties, not scored as the same site.",
+  "summary": "Nykaa documents refunds, returns, chat hours, and a named grievance officer. The public pages still disagree with themselves on the two things a stuck customer needs first: the return clock, and the phone number.",
+  "score": 66,
+  "grade": "D",
+  "editor": "Rana / BotLitmus v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 11,
+      "note": "Same brand property uses 15 days and 15 business days. Two different toll-free numbers on two official pages."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 10,
+      "note": "Policy leads with an “Easy return policy” then lists hygiene, custom, and campaign exceptions. Sister sites quote 7-day and 5-day windows."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 13,
+      "note": "Privacy page dated 29 Jan 2026, version 1.4."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 18,
+      "note": "Cancel, return, refund timing, exclusions, data-delete path, grievance officer."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 8,
+      "note": "Email, chat hours, named officer. Phone number is not stable across pages."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 6,
+      "note": "Chat is listed as customer service on app and desktop, 8 AM–10 PM. No public statement of whether that chat is a bot."
+    }
+  ],
+  "findings": [
+    {
+      "id": "nykaa-return-clock",
+      "severity": "high",
+      "type": "contradiction",
+      "title": "Return window is 15 days and 15 business days on the same policy",
+      "whyItHurts": "A customer on day 16 calendar / day 12 business cannot tell if they still have a right. That is when tickets explode.",
+      "fix": "Pick one clock. Use it in every sentence. Put it in the first 80 words of the policy.",
+      "evidence": [
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "you can raise a return/exchange request of a product within 15 days of its delivery",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "If request is initiated after 15 business days of order delivery",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "nykaa-two-phones",
+      "severity": "high",
+      "type": "contradiction",
+      "title": "Two official toll-free numbers",
+      "whyItHurts": "The first thing a failed chat user does is call. Two numbers is a support-ops leak, not a copy typo.",
+      "fix": "One number everywhere. Redirect the retired number. Update cancellation-policy and the grievance block together.",
+      "evidence": [
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "Or call us on 1800-267-4444 (Monday To Sunday, 8AM to 10PM).",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.nykaa.com/policy",
+          "quote": "Phone: 1800-267-88888 (Mon to Sun, 8 AM to 10 PM)",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "nykaa-easy-return",
+      "severity": "medium",
+      "type": "overclaim",
+      "title": "“Easy return policy” sits above a long ineligible list",
+      "whyItHurts": "Customers hear the slogan, buy a mascara or appliance, then hit hygiene and custom-product exclusions.",
+      "fix": "Lead with “returns in 15 days, except these categories” and name the exceptions in the same paragraph.",
+      "evidence": [
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "Nykaa offers its customers an ’Easy return policy’",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "Personal care appliances cannot be returned due to hygiene issues",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "nykaa-wallet",
+      "severity": "medium",
+      "type": "buried",
+      "title": "Wallet refunds are refused on cancellation",
+      "whyItHurts": "A customer who paid with wallet expects wallet back. The refusal is legal if stated. It is easy to miss.",
+      "fix": "Put payment-method refund rules in a table at the top of the cancel section.",
+      "evidence": [
+        {
+          "url": "https://www.nykaa.com/cancellation-policy",
+          "quote": "We do not offer wallet refunds for cancellations",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "vendor": "in-app / desktop chat (vendor not identified)",
+      "evidence": "Privacy policy: Chat with our Customer Service Team on Nykaa App and Desktop (Mon to Sun, 8 AM to 10 PM)"
+    }
+  ],
+  "pagesFetched": [
+    { "url": "https://www.nykaa.com/cancellation-policy", "ok": true, "title": "Cancellation and Return Policy" },
+    { "url": "https://www.nykaa.com/policy", "ok": true, "title": "Nykaa Beauty Privacy Policy" },
+    { "url": "https://support.nykaa.com/", "ok": true, "title": "support.nykaa.com (linked, not fully extracted)" }
+  ]
+}

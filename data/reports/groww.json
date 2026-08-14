@@ -1,0 +1,109 @@
+{
+  "slug": "groww",
+  "brand": "Groww",
+  "sector": "Consumer broking / wealth",
+  "country": "IN",
+  "homepage": "https://groww.in",
+  "helpUrls": [
+    "https://groww.in/help",
+    "https://groww.in/help/my-account/searchable/customer-care-and-grievance-escalation-matrix-14"
+  ],
+  "scannedAt": "2026-08-14",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Help homepage is a thin shell. Escalation matrix fetched. Help-article body content beyond that matrix was not crawled.",
+  "summary": "Groww publishes named officers and SEBI / ODR links. That is stronger than most consumer apps. The help homepage itself almost does not exist, and “24×7” sits next to weekday-only CX leadership hours.",
+  "score": 68,
+  "grade": "D",
+  "editor": "Rana / BotLitmus v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 14,
+      "note": "24×7 claim on the same page as Mon–Fri 9–5 for Head of Customer Care and Compliance."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 12,
+      "note": "Help homepage does not match the depth of the legal matrix. A user who only opens /help sees almost nothing."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 13,
+      "note": "Footer version 7.9.3, copyright through 2026. No article-level updated stamp on the matrix."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 15,
+      "note": "Escalation, SEBI SCORES, SMART ODR, cyber cell. Everyday how-to articles were not visible from the homepage crawl."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 9,
+      "note": "Phone +91 9108800000, named Head of CX, Compliance, Designated Director, regulator links."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 5,
+      "note": "No public chat widget on the two pages fetched."
+    }
+  ],
+  "findings": [
+    {
+      "id": "groww-24x7",
+      "severity": "medium",
+      "type": "contradiction",
+      "title": "24×7 support claim next to weekday leadership hours",
+      "whyItHurts": "A customer who escalates on Saturday will read 24×7, then hit a Mon–Fri officer line. Say which layer is 24×7.",
+      "fix": "“L1 chat/phone 24×7. Named officers Mon–Fri 9–5 IST.” One sentence.",
+      "evidence": [
+        {
+          "url": "https://groww.in/help/my-account/searchable/customer-care-and-grievance-escalation-matrix-14",
+          "quote": "We are available 24*7 to resolve your issue.",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://groww.in/help/my-account/searchable/customer-care-and-grievance-escalation-matrix-14",
+          "quote": "08046161210 Monday to Friday (9AM - 5PM)",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "groww-empty-home",
+      "severity": "medium",
+      "type": "missing",
+      "title": "Help homepage is a shell",
+      "whyItHurts": "The URL customers guess first is /help. What we fetched is “What's new / Feedback / Grievance”. The real matrix is buried under a long slug.",
+      "fix": "Put search, top 10 tasks, and the phone number on /help. Link the matrix from there in one tap.",
+      "evidence": [
+        {
+          "url": "https://groww.in/help",
+          "quote": "What's new Feedback Grievance",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "widgets": [],
+  "pagesFetched": [
+    { "url": "https://groww.in/help", "ok": true, "title": "Help & Support" },
+    {
+      "url": "https://groww.in/help/my-account/searchable/customer-care-and-grievance-escalation-matrix-14",
+      "ok": true,
+      "title": "Customer care and Grievance Escalation matrix"
+    }
+  ]
+}

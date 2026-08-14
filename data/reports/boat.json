@@ -1,0 +1,150 @@
+{
+  "slug": "boat",
+  "brand": "boAt",
+  "sector": "D2C consumer electronics",
+  "country": "IN",
+  "homepage": "https://www.boat-lifestyle.com",
+  "helpUrls": [
+    "https://www.boat-lifestyle.com/pages/return-policy",
+    "https://www.boat-lifestyle.com/pages/contact-us"
+  ],
+  "scannedAt": "2026-08-14",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Return policy fetched in full. Contact page rendered as the marketing homepage, so escalation details beyond WhatsApp are thin.",
+  "summary": "boAt is blunt about replacement-only and a 24-hour damage window. The problem is the rest of the site still sounds like a liberal, free-delivery, easy-cancel brand. That gap is the score.",
+  "score": 48,
+  "grade": "F",
+  "editor": "Rana / BotLitmus v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 8,
+      "note": "Policy calls itself liberal, then refuses most cancellations. Replacement vs refund wording is at least explicit."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 8,
+      "note": "Homepage tiles say Free Express Delivery and 7-day Replacement. Policy charges shipping under ₹499 and forbids refunds."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 9,
+      "note": "Warranty dates from April 2025 are current enough. “1024-bit” SSL is a generation out of date."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 13,
+      "note": "Replacement, cancellation, pricing-error, delivery, shipping fee. No customer refund path by design."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 5,
+      "note": "WhatsApp 919667700177 is the visible chat. Contact URL did not yield a dedicated desk page."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 5,
+      "note": "WhatsApp deep-link. No labelled bot. Neutral, not a plus."
+    }
+  ],
+  "findings": [
+    {
+      "id": "boat-no-refund",
+      "severity": "critical",
+      "type": "overclaim",
+      "title": "“Liberal cancellation” and “no return or refund” on the same policy",
+      "whyItHurts": "A buyer who read the heading will believe they can cancel. The body says shipping-started and same-day orders cannot.",
+      "fix": "Delete the word liberal. Open with “Replacement only. No refunds. Cancel only before we hand the order to shipping.”",
+      "evidence": [
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "We believe in helping our customers as far as possible, and has therefore a liberal cancellation policy.",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "Please see that no return or refund shall be provided.",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "Cancellations request will not be entertained if the orders have already been communicated to the customers and they have initiated the process of shipping them.",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "boat-24h",
+      "severity": "high",
+      "type": "buried",
+      "title": "Damage must be reported within 24 hours",
+      "whyItHurts": "A weekday delivery at 8pm plus a work day is already past the window. This is the ticket that becomes a 1-star review.",
+      "fix": "Put the 24-hour damage clock in the order-delivered SMS, not only in the policy.",
+      "evidence": [
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "Replacement can be made if the customer establishes that the product delivered in defective condition or has a physical damage within 24 hours of receipt of the product",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "boat-free-delivery",
+      "severity": "high",
+      "type": "contradiction",
+      "title": "Homepage says Free Express Delivery. Policy charges ₹30 under ₹499.",
+      "whyItHurts": "The asterisk on “Free” is doing all the work. Checkout is where trust dies.",
+      "fix": "Homepage should say “Free delivery over ₹499”.",
+      "evidence": [
+        {
+          "url": "https://www.boat-lifestyle.com/pages/contact-us",
+          "quote": "Free Express Delivery*",
+          "accessedAt": "2026-08-14"
+        },
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "Shipping charges Rs 30 levied on orders below Rs 499.",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "id": "boat-ssl",
+      "severity": "low",
+      "type": "stale",
+      "title": "Security copy still boasts 1024-bit encryption",
+      "whyItHurts": "Not a customer-loss issue. It is a signal the policy page is not owned.",
+      "fix": "State TLS 1.2+ and that card data is taken by the gateway, which the same page already says.",
+      "evidence": [
+        {
+          "url": "https://www.boat-lifestyle.com/pages/return-policy",
+          "quote": "Transactions on the website are protected by SSL (Secure Sockets Layer) and Secure Data Encryption using a 1024-bit process.",
+          "accessedAt": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "vendor": "WhatsApp",
+      "evidence": "https://api.whatsapp.com/send?phone=919667700177&text=Hi"
+    }
+  ],
+  "pagesFetched": [
+    { "url": "https://www.boat-lifestyle.com/pages/return-policy", "ok": true, "title": "Return Policy" },
+    { "url": "https://www.boat-lifestyle.com/pages/contact-us", "ok": true, "title": "Contact / marketing homepage fallback" }
+  ]
+}
