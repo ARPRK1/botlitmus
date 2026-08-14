@@ -10,7 +10,7 @@ Update this file at the end of every working session. A new Claude with no chat 
 - First rupee: not received
 - Published reports: 5 (zerodha 89 B, razorpay 68 D, groww 68 D, nykaa 66 D, boat 48 F)
 - r/indianstartups: removed (promo)
-- r/SideProject: owner posted 2026-08-14. Thread URL not in repo. Do not post a third Reddit copy the same day.
+- r/SideProject: https://www.reddit.com/r/SideProject/comments/1vo9chq/i_scored_5_indian_help_centers_on_whether_the/ — live to owner; logged-out view showed `[removed]` at 2026-08-14 15:02 UTC. Do not post a third Reddit copy today.
 - Pricing page: https://botlitmus.vercel.app/pricing loads. Owner said the pricing *link* is broken and assigned that fix to Claude Code. Do not start a second pricing rewrite in parallel. Check nav/footer/homepage CTAs only.
 
 ## What shipped today
