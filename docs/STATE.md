@@ -9,7 +9,7 @@ Update this file at the end of every working session. A new Claude with no chat 
 - Live URL: https://botlitmus.vercel.app
 - GitHub homepage field: set to that URL
 - First rupee: not received.
-- Public post: r/indianstartups removed the first post (promo / launch-post filter). Do not repost there. Next: r/SideProject (draft 1b).
+- Public post: r/indianstartups removed. Owner posted to r/SideProject 2026-08-14. Thread URL not yet in repo. Do not post a third Reddit copy today.
 - Published reports: 5 (zerodha 89 B, razorpay 68 D, groww 68 D, nykaa 66 D, boat 48 F)
 
 ## What shipped
