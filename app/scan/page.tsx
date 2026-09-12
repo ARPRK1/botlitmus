@@ -16,7 +16,8 @@ export default function ScanPage() {
         This crawls public HTML from this server. It does not log into a chatbot.
         Many Indian storefronts block datacentre IPs. If the fetch fails, paste
         the policy URL itself, not the homepage. The number you get is a
-        heuristic, not a league grade.
+        heuristic, not a league grade. Leave your work email so a failed fetch
+        still reaches a human.
       </p>
       <div className="mt-8">
         <ScanForm />

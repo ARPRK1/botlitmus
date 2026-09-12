@@ -5,8 +5,31 @@ import type { Report } from "@/lib/types";
 import { FindingCard } from "./FindingCard";
 import { ScoreMark } from "./ScoreMark";
 
+const LEAD_ENDPOINT = "https://formsubmit.co/ajax/rp271187@gmail.com";
+
+async function captureLead(email: string, url: string) {
+  try {
+    await fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        accept: "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        site: url,
+        source: "botlitmus-scan",
+        _subject: `BotLitmus first-pass request: ${url}`,
+      }),
+    });
+  } catch {
+    // Lead capture must not block the scan. Rana still sees the on-page result.
+  }
+}
+
 export function ScanForm() {
   const [url, setUrl] = useState("");
+  const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [report, setReport] = useState<Report | null>(null);
@@ -16,11 +39,15 @@ export function ScanForm() {
     setBusy(true);
     setError(null);
     setReport(null);
+    const trimmedUrl = url.trim();
+    const trimmedEmail = email.trim();
+    // Fire-and-forget lead email so Rana has the demand signal.
+    void captureLead(trimmedEmail, trimmedUrl);
     try {
       const res = await fetch("/api/scan", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ url }),
+        body: JSON.stringify({ url: trimmedUrl }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Scan failed");
@@ -34,21 +61,36 @@ export function ScanForm() {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className="flex flex-col gap-3 sm:flex-row">
+      <form onSubmit={onSubmit} className="flex flex-col gap-3">
         <input
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          placeholder="https://brand.com/help or a policy URL"
-          className="flex-1 border border-ink bg-paper px-3 py-3 font-mono text-sm outline-none focus:bg-white"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@company.com"
+          className="w-full border border-ink bg-paper px-3 py-3 font-mono text-sm outline-none focus:bg-white"
           required
+          autoComplete="email"
         />
-        <button
-          type="submit"
-          disabled={busy}
-          className="border border-ink bg-ink px-5 py-3 font-mono text-xs uppercase tracking-widest text-paper disabled:opacity-50"
-        >
-          {busy ? "Reading pages…" : "Run first pass"}
-        </button>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <input
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder="https://brand.com/help or a policy URL"
+            className="flex-1 border border-ink bg-paper px-3 py-3 font-mono text-sm outline-none focus:bg-white"
+            required
+          />
+          <button
+            type="submit"
+            disabled={busy}
+            className="border border-ink bg-ink px-5 py-3 font-mono text-xs uppercase tracking-widest text-paper disabled:opacity-50"
+          >
+            {busy ? "Reading pages…" : "Run first pass"}
+          </button>
+        </div>
+        <p className="font-mono text-[11px] leading-relaxed text-smoke">
+          Free. Email so we can send the first pass if the fetch stalls. Public
+          pages only. No login. No chatbot access.
+        </p>
       </form>
       {error && <p className="mt-4 font-mono text-sm text-oxide">{error}</p>}
       {report && (
