@@ -11,7 +11,10 @@ Subject: Removal of help-centre scoring post
 
 Hi. My post on scoring five Indian help centres was removed. I built the site, so I get that it can read as promo. Happy to post a version with no links if that is allowed. If the issue was account age or automod, tell me and I will wait. Thanks.
 
-## 1b. r/SideProject — send today
+## 1b. r/SideProject — POSTED 2026-08-14 by u/Modernmonk_Build
+
+Thread: https://www.reddit.com/r/SideProject/comments/1vo9chq/i_scored_5_indian_help_centers_on_whether_the/
+Logged-out view showed `[removed]` at 15:02 UTC. Live to owner. Do not repost today.
 
 This sub exists to share what you built. One link, at the end. Do not paste the indianstartups draft.
 
@@ -72,3 +75,40 @@ Two official phone numbers on two official pages.
 That is a support-ops leak, not a typo.
 
 https://botlitmus.vercel.app/report/nykaa
+
+## 4. LinkedIn — Mamaearth dual clock (draft 2026-09-12)
+
+Do not auto-post. Rana posts.
+
+Title idea: Mamaearth gives you 7 days for a wrong product. Damaged gets 2.
+
+Body:
+
+I scored Mamaearth's public return page for BotLitmus.
+
+Wrong or expired product: raise a return within 7 days of delivery.
+
+Damaged or missing product: 2 days.
+
+Both rules are on the same page. The shorter clock is easy to miss if you only read the first number.
+
+Score: 77 C. Partial crawl. Quotes are on the report.
+
+https://botlitmus.vercel.app/report/mamaearth
+
+If you work there and a quote is stale, send the new URL.
+
+## 5. X — Mamaearth (draft 2026-09-12)
+
+Not the same day as the LinkedIn post.
+
+Mamaearth return policy:
+
+Wrong or expired: 7 days.
+
+Damaged or missing: 2 days.
+
+Same page. Two clocks.
+
+https://botlitmus.vercel.app/report/mamaearth
+

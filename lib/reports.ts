@@ -4,6 +4,7 @@ import boat from "@/data/reports/boat.json";
 import razorpay from "@/data/reports/razorpay.json";
 import groww from "@/data/reports/groww.json";
 import zerodha from "@/data/reports/zerodha.json";
+import mamaearth from "@/data/reports/mamaearth.json";
 
 const ALL: Report[] = [
   zerodha as Report,
@@ -11,6 +12,7 @@ const ALL: Report[] = [
   groww as Report,
   nykaa as Report,
   boat as Report,
+  mamaearth as Report,
 ];
 
 export function allReports(): Report[] {

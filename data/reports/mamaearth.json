@@ -1,0 +1,179 @@
+{
+  "slug": "mamaearth",
+  "brand": "Mamaearth",
+  "sector": "D2C beauty / personal care",
+  "country": "IN",
+  "homepage": "https://mamaearth.in/",
+  "helpUrls": [
+    "https://mamaearth.in/pages/return-policy",
+    "https://mamaearth.in/pages/privacy-policy",
+    "https://mamaearth.in/contact"
+  ],
+  "scannedAt": "2026-09-12",
+  "scoreSource": "editor+rubric",
+  "crawlQuality": "partial",
+  "crawlNote": "Return and privacy pages fetched in full. Contact URL returned a Skin Care blog listing, not a help desk. help.mamaearth.in returned 403.",
+  "summary": "Mamaearth’s return page is usable. It names refunds, cancels, replacements, and a grievance email. The honesty gap is the two clocks: seven days for wrong or expired product, two days for damaged or missing, with the shorter one easy to miss.",
+  "score": 77,
+  "grade": "C",
+  "editor": "BotLitmus Reports / v0.1",
+  "dimensions": [
+    {
+      "key": "internal",
+      "label": "Internal consistency",
+      "weight": 25,
+      "score": 22,
+      "note": "Seven-day and two-day clocks cover different cases. Wording is clear once you read the whole page. Mild clarity hit only."
+    },
+    {
+      "key": "surface",
+      "label": "Help vs marketing",
+      "weight": 20,
+      "score": 17,
+      "note": "Cart states the FREE delivery threshold. Promo banners sit on the policy page but do not invent a liberal cancel promise."
+    },
+    {
+      "key": "staleness",
+      "label": "Freshness",
+      "weight": 15,
+      "score": 11,
+      "note": "No clear last-updated stamp on the return policy. Grievance block on privacy is present."
+    },
+    {
+      "key": "coverage",
+      "label": "High-intent coverage",
+      "weight": 20,
+      "score": 17,
+      "note": "Refund, cancel, return/replace, grievance email, privacy/data rights. No clear warranty article on the fetched pages."
+    },
+    {
+      "key": "escalation",
+      "label": "Path to a human",
+      "weight": 10,
+      "score": 5,
+      "note": "nodal@honasa.in and return_prime form exist. /contact is a blog listing. No verified public phone on the fetched pages."
+    },
+    {
+      "key": "botSurface",
+      "label": "Bot / chat honesty",
+      "weight": 10,
+      "score": 5,
+      "note": "Return policy mentions a Chat option. Hours and vendor are not labelled in the fetched HTML. Neutral."
+    }
+  ],
+  "findings": [
+    {
+      "id": "mamaearth-dual-clock",
+      "severity": "high",
+      "type": "buried",
+      "title": "Wrong or expired is 7 days. Damaged or missing is 2 days.",
+      "whyItHurts": "A customer with a crushed bottle who waits past two days is already out of policy while still inside the more visible seven-day window.",
+      "fix": "Put both clocks in the first paragraph and in the delivered SMS.",
+      "evidence": [
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "Raise a return/ replacement request within 7 days from the date of delivery, if you’ve received wrong or expired product(s).",
+          "accessedAt": "2026-09-12"
+        },
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "In case of damaged/ missing product(s), raise a return/ replacement request within 2 days from the date of delivery.",
+          "accessedAt": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "id": "mamaearth-cancel-asymmetry",
+      "severity": "medium",
+      "type": "overclaim",
+      "title": "Cancel button sounds friendly. Mamaearth can cancel without confirming you.",
+      "whyItHurts": "The customer path stops at Ready to Ship. The company path does not.",
+      "fix": "Say both rules in one sentence at the top of cancellations.",
+      "evidence": [
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "You can cancel order from CANCEL button from order details page under My account section. You just need to give reason for cancellation, and leave rest on us.",
+          "accessedAt": "2026-09-12"
+        },
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "Mamaearth reserves the right to cancel any order without pre-confirming the customer at any time and may verify any order before shipping the same to the customer that may include having a verbal or written confirmation from the customer.",
+          "accessedAt": "2026-09-12"
+        },
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "Note - Orders can be only cancelled till the status is “Ready to Ship”.",
+          "accessedAt": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "id": "mamaearth-contact-blog",
+      "severity": "low",
+      "type": "missing",
+      "title": "/contact is a blog listing, not a help desk",
+      "whyItHurts": "A stranger looking for a phone or ticket lands on skin-care articles.",
+      "fix": "Point /contact at return_prime, Chat, and the grievance email.",
+      "evidence": [
+        {
+          "url": "https://mamaearth.in/pages/return-policy",
+          "quote": "You can also raise a request with us using the Chat option.",
+          "accessedAt": "2026-09-12"
+        },
+        {
+          "url": "https://mamaearth.in/pages/privacy-policy",
+          "quote": "Email id – nodal@honasa.in",
+          "accessedAt": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "id": "mamaearth-free-delivery-threshold",
+      "severity": "low",
+      "type": "buried",
+      "title": "FREE delivery is real, but only after the cart threshold",
+      "whyItHurts": "The cart states the rule. A buyer who only saw FREE in the banner still has to discover the ₹399 gap at checkout.",
+      "fix": "Put Free delivery over ₹399 next to the banner claim.",
+      "evidence": [
+        {
+          "url": "https://mamaearth.in/",
+          "quote": "Add ₹399 more to get FREE delivery",
+          "accessedAt": "2026-09-12"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "vendor": "Chat",
+      "evidence": "You can also raise a request with us using the Chat option."
+    }
+  ],
+  "pagesFetched": [
+    {
+      "url": "https://mamaearth.in/",
+      "ok": true,
+      "title": "Homepage"
+    },
+    {
+      "url": "https://mamaearth.in/pages/return-policy",
+      "ok": true,
+      "title": "Return Policy"
+    },
+    {
+      "url": "https://mamaearth.in/pages/privacy-policy",
+      "ok": true,
+      "title": "Privacy Policy"
+    },
+    {
+      "url": "https://mamaearth.in/contact",
+      "ok": true,
+      "title": "Contact rendered as Skin Care blog listing"
+    },
+    {
+      "url": "https://help.mamaearth.in/",
+      "ok": false,
+      "title": "403 blocked"
+    }
+  ]
+}
